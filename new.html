@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Circle</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<!-- <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .page {
+        height: 100vh;
+        width: 100vw;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .outer {
+        aspect-ratio: 1 / 1;
+        width: 450px;
+        background-color: #3c3b3f; /* Dark Charcoal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .glow {
+        aspect-ratio: 1 / 1;
+        width: 350px;
+        background-color: #505c3c; /* Olive Green */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .bright {
+        aspect-ratio: 1 / 1;
+        width: 200px;
+        background-color: #b8c768; /* Light Lime Green */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .light {
+        width: 100px;
+        aspect-ratio: 1 / 1;
+        background-color: #fdfd96; /* Pastel Yellow */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .stick {
+        height: 100px;
+        width: 20px;
+        display: flex;
+        background-color: black;
+        flex-direction: column;
+    }
+
+    .switch {
+        height: 35px;
+        width: 120px;
+        background-color: #ffd700; /* Gold */
+        color: black;
+        cursor: pointer;
+        margin-top: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .switch:hover {
+        background-color: #ffcc00;
+    } -->
+</style>
+
+<body>
+    <!-- <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact us</li>
+        </ul>
+    </nav>
+    <div class="page">
+        <div class="outer">
+            <div class="glow">
+                <div class="bright">
+                    <div class="light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stick"></div>
+        <button class="switch">Switch</button>
+    </div> -->
+
+    <!-- <script>
+        let toggled = false;
+
+        document.querySelector(".switch").onclick = function () {
+            toggled = !toggled;
+
+            if (toggled) {
+                document.querySelector(".outer").style.backgroundColor = "#4b4b2f";   // dull outer
+                document.querySelector(".glow").style.backgroundColor = "#bdb76b";    // soft glow
+                document.querySelector(".bright").style.backgroundColor = "#fdfd96";  // light yellow
+                document.querySelector(".light").style.backgroundColor = "#ffff33";   // bright center
+            } else {
+                document.querySelector(".outer").style.backgroundColor = "#3c3b3f";
+                document.querySelector(".glow").style.backgroundColor = "#505c3c";
+                document.querySelector(".bright").style.backgroundColor = "#b8c768";
+                document.querySelector(".light").style.backgroundColor = "#fdfd96";
+            }
+        };
+
+        let a =document.body;
+        console.log("the first child of body is"+a.firstChild)
+        console.log("the first element of body is"+a.firstElementChild)
+        
+
+        const change=()=>{
+           a.firstElementChild.firstElementChild.firstElementChild.style.backgroundColor="aqua"
+        }
+        
+        console.log(a.firstElementChild.firstElementChild.nextElementSibling)      
+    </script> -->
+    <div    class ="box" id="id1">this is id 1</div>
+    <div class="box" id="id2">this is id 2</div>
+    <script src="/new.js"></script>
+</body>
+
+</html>

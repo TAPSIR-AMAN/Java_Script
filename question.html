@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        display: flex;
+        background-color: rgb(173, 208, 15);
+    }
+
+    li {
+        list-style: none;
+        padding-left: 20px;
+        font-size: large;
+    }
+    .inner p{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+</style>
+
+<body>
+    <!-- <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>phone no</li>
+            <li>contact</li>
+        </ul>
+    </nav> -->
+
+    <!-- <table>
+        <td>home</td>
+        <tr>home1</tr>
+        <tr>home2</tr>
+        <tr>home3</tr>
+        <tr>home4</tr>
+    </table> -->
+    <!-- 
+    <div class="parent">
+        <div class="first">first</div>
+        <div class="mid">mid</div>
+        <div class="last">last</div>
+    </div> -->
+
+    <h1>JOKES:</h1>
+    <div class="inner">
+        <p>your new joke</p>
+    </div>
+
+    <script>
+        // document.querySelector("nav").style.color="red"
+
+        // document.getElementsByTagName("ul")[0].firstElementChild.style.color="red"
+
+        // let doc=document.getElementsByClassName("parent")[0]
+        // doc.style.display="flex";
+        // doc.style.backgroundColor="aqua"
+        // doc.firstElementChild.style.paddingRight="20px";
+        // doc.lastElementChild.style.paddingLeft="20px";
+
+        // doc.firstElementChild.style.color="green";
+        // doc.lastElementChild.style.color="green";
+        // let doc=document.getElementsByTagName("li");
+        // for (let i = 0; i < doc.length; i++) {
+        //     doc[i].style.backgroundColor="cyan";
+
+        // }
+        // Array.from(document.getElementsByTagName("li")).forEach(element => {
+        //     element.style.backgroundColor="red";
+        // });
+        // let arr=[1,3,4,5,4,6,3].forEach(element=>{
+        //     console.log(element)
+        // })
+
+
+        let jokes = [
+  "Why do programmers prefer dark mode? Because the light attracts bugs!",
+  "Why was the JavaScript developer sad? Because he didn't know how to null his feelings.",
+  "Why did the developer go broke? Because he used up all his cache.",
+  "Why do Python programmers wear glasses? Because they can't C!",
+  "Why was the function so excited? It finally got called!",
+  "How many programmers does it take to change a light bulb? None – it's a hardware problem.",
+  "Why can't you trust JavaScript developers? Because they let undefined things happen.",
+  "Why did the computer get cold? It left its Windows open.",
+  "What's a programmer’s favorite hangout place? The Foo Bar.",
+  "Why did the coder get kicked out of school? Because he kept breaking the class rules.",
+  "Why do Java developers wear glasses? Because they don't see sharp.",
+  "What did the array say after it was extended? Stop pushing my limits!",
+  "Why was the loop stuck forever? It couldn’t break up.",
+  "Why did the variable break up with the function? Because it had too many arguments.",
+  "Why did the server go to therapy? It had too many connections.",
+  "What is a programmer’s favorite type of music? Algo-rhythm.",
+  "Why was the computer stressed? It had too many tabs open.",
+  "How does a computer get drunk? It takes screenshots.",
+  "Why was the database so clingy? It couldn't handle being de-normalized.",
+  "Why was the CSS file always calm? Because it knew how to style itself.",
+  "How do you comfort a JavaScript bug? You console it.",
+  "Why don’t programmers like nature? Too many bugs.",
+  "How did the software engineer propose? With a Git ring.",
+  "Why did the JavaScript file break up with HTML? It couldn’t commit.",
+  "Why couldn’t the string find its other half? It wasn’t properly terminated.",
+  "What do you call a coder who’s also a musician? A keyboard player.",
+  "Why did the DevOps engineer quit? He didn’t get enough uptime.",
+  "Why was the API angry? Too many requests.",
+  "How do you make a website feel good? Give it a responsive design.",
+  "Why did the boolean marry the integer? Because they had true compatibility.",
+  "What do you call a lazy function? A callback that never calls back.",
+  "Why are JavaScript developers so calm? Because they use 'try' and 'catch'.",
+  "Why was the backend developer always relaxed? He had RESTful APIs.",
+  "Why was the bug upset? It was misunderstood.",
+  "How do developers enjoy nature? They open a window.",
+  "What did the developer name his dog? Java.",
+  "Why don’t robots panic? Because they always keep their bits together.",
+  "Why did the function stop returning results? It lost its scope.",
+  "How does a coder flirt? By checking you out of the DOM.",
+  "What do programmers eat for lunch? Code sandwiches.",
+  "Why was the tech conference so loud? Too many speakers.",
+  "Why don’t computers argue? They only process logic.",
+  "Why did the app go broke? Too many free users.",
+  "Why was the UI designer bad at hide and seek? Because he always left visible traces.",
+  "Why was the startup sad? No one funded its dreams.",
+  "Why did the keyboard break up with the mouse? They had no connection.",
+  "What do you call a website for cats? A purr-l.",
+  "Why did the computer cross the road? To get a byte from the other side.",
+  "Why do coders hate writing documentation? Because the code should speak for itself.",
+  "Why was the mobile app slow? It lost its responsiveness.",
+  "How do JavaScript developers stay fit? They do push() ups.",
+  "Why are tech people bad at relationships? They always want to control everything.",
+  "Why did the code refuse to run? It had commitment issues.",
+  "What do you call a computer superhero? The Debugger.",
+  "Why did the method refuse to run? It had no class.",
+  "Why don’t programmers sleep? Because they’re always in a loop.",
+  "Why do coders always mix up Christmas and Halloween? Because Oct 31 == Dec 25.",
+  "Why did the array go to school? To learn its indexes.",
+  "What do you call a group of 8 Hobbits? An Octo-pi.",
+  "Why did the HTML element get promoted? It was a header.",
+  "What did the hacker eat for lunch? Phish and chips.",
+  "What do you call a CSS artist? A stylin’ guy.",
+  "Why couldn’t the object access its method? Because it was private.",
+  "Why did the compiler cry? It had too many issues to handle.",
+  "Why did the developer stay calm during deployment? He had version control.",
+  "Why was the JavaScript file always late? It was asynchronous.",
+  "Why didn’t the developer like his job? He had too many classes.",
+  "Why did the browser break up with the server? Too many redirects.",
+  "Why did the data analyst break up with Excel? It was just too formulaic.",
+  "How do techies get over heartbreak? They clear their cache.",
+  "Why did the developer join the circus? He loved juggling functions.",
+  "Why did the computer take a nap? It needed to reboot.",
+  "Why was the WiFi signal weak? It was in airplane mode.",
+  "What’s a computer’s favorite snack? Microchips.",
+  "Why was the DNS server acting up? It couldn’t resolve anything.",
+  "Why don’t hackers take holidays? They’re always on a break-in.",
+  "What did the chip say to the motherboard? You complete me.",
+  "Why do developers hate elevators? They don’t like being pushed to a new level.",
+  "Why are tech people such good detectives? They always inspect elements.",
+  "Why do programmers avoid small talk? They're not good at scripting conversations.",
+  "Why did the developer love coffee? Because he always needed a Java boost.",
+  "Why was the webpage freezing? Too many pop-ups!",
+  "Why don’t computers take their hats off? They have CAPS LOCK on.",
+  "Why do bugs multiply? Because they breed in loops.",
+  "Why did the developer refuse to fix the bug? It was a feature.",
+  "Why did the function go to school? To get called.",
+  "Why was the tech support guy so calm? Because he’d seen it all before — twice.",
+  "Why did the database admin fall asleep? Too many queries.",
+  "Why don’t developers trust stairs? They’re always up to something.",
+  "Why did the developer avoid the kitchen? Too many cookies.",
+  "Why was the router so popular? It connected with everyone.",
+  "What’s a server’s favorite workout? Load balancing.",
+  "Why was the syntax so bad? It needed proper structure.",
+  "Why did the IDE crash? It couldn’t handle the pressure.",
+  "Why don’t Java developers play chess? Because they can't handle checked exceptions.",
+  "Why was the file depressed? It was zipped up inside.",
+  "Why was the frontend mad at the backend? Because it kept changing the API.",
+  "Why do coders drink so much coffee? Because they can’t C# without it.",
+  "Why was the URL blushing? It was being tracked.",
+  "Why did the developer go on a date with an exception? He wanted a catch.",
+  "What’s a loop’s favorite song? 'You spin me right round…'",
+  "Why did the programmer go outside? To debug in the wild."
+];
+
+        ran=random=Math.floor(Math.random()*100)
+        let doc=document.getElementsByClassName("inner")[0].innerHTML=`<h1>Joke:${jokes[ran]}</h1>`;
+        
+    </script>
+</body>
+
+</html>
