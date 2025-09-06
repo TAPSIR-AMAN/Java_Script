@@ -1,0 +1,189 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            height: 300px;
+            width: 800px;
+            background-color: rgb(149, 241, 228);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hour{
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .min{
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            margin-right: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sec{
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            margin-right: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="clock">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+   </div> 
+
+
+
+
+
+    <script>
+        setInterval(() => {
+                    let a=new Date();
+        let h=a.getHours();
+        document.getElementsByClassName("hour")[0].innerHTML = `<h1><b>${h}</b></h1>`;
+        let m=a.getMinutes();
+        document.getElementsByClassName("min")[0].innerHTML=`<h1><b>${m}</b></h1>`
+        let s=a.getSeconds();
+        document.getElementsByClassName("sec")[0].innerHTML=`<h1><b>${s}</b></h1>`
+        }, 1000);
+
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        /* Top right small clock */
+        .small-clock {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        /* Container for the clock */
+        .clock-container {
+            width: 800px;
+            margin: 60px auto;
+            text-align: center;
+        }
+        .clock-container h1 {
+            margin-bottom: 20px;
+        }
+        /* Main clock */
+        .clock {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box {
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .label {
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main clock container -->
+    <div class="clock-container">
+        <h1>Clock</h1>
+        <div class="clock">
+            <div class="time-block">
+                <div class="box hour"></div>
+                <div class="label">Hour</div>
+            </div>
+            <div class="time-block">
+                <div class="box min"></div>
+                <div class="label">Minute</div>
+            </div>
+            <div class="time-block">
+                <div class="box sec"></div>
+                <div class="label">Second</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            let a = new Date();
+            let h = a.getHours();
+            let m = a.getMinutes();
+            let s = a.getSeconds();
+
+            // Format with leading zeros
+            let hh = (h < 10 ? "0" : "") + h;
+            let mm = (m < 10 ? "0" : "") + m;
+            let ss = (s < 10 ? "0" : "") + s;
+
+            
+
+            // Main clock
+            document.getElementsByClassName("hour")[0].innerText = hh;
+            document.getElementsByClassName("min")[0].innerText = mm;
+            document.getElementsByClassName("sec")[0].innerText = ss;
+        }
+
+        updateClock(); // Run once immediately
+        setInterval(updateClock, 1000); // Update every second
+    </script>
+
+</body>
+</html>
