@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // let promise = new Promise(function(resolve,reject){
+        //         alert("hello in promice")
+        //         resolve(56);
+        // })
+        // console.log("hello 1")
+        // setTimeout(() => {
+        //     console.log("hello 2 after 2 second")
+        // }, 2000);
+
+        // console.log("hello 3")
+        // console.log(promise)
+
+
+        // let p = new Promise((resolve,reject)=>{
+
+        //     console.log("the promise is pending")
+        //     setTimeout(()=>{
+        //         // console.log("the promise is now fullfiled")
+        //         resolve(true)
+        //     },5000)
+        // })
+        // let p2 = new Promise((resolve,reject)=>{
+            
+        //     console.log("the promise is pending")
+        //     setTimeout(()=>{
+        //         reject(new Error("i am an error"))
+        //     },5000)
+        // })
+        // // console.log(p)
+        // // console.log(p2)
+        
+
+        // p.then((value)=>{
+        //     console.log(value)
+        // })
+        // p2.then((value)=>{
+        //     console.log(value)
+        // },(error)=>{
+        //     console.log("their is some error in p2")
+        // })
+        // p2.catch((error)=>{
+        //     console.log("their is some error in p2")
+        // })
+
+
+        let load =new Promise((resolve,reject)=>{
+            let src="myscript.js"
+            let script=document.createElement("Script")
+            script.src=src;
+            document.body.append(script);
+            resolve("done")
+
+        })
+        load.then((value)=>{
+            console.log(value)
+        })
+    </script>
+</body>
+</html>
