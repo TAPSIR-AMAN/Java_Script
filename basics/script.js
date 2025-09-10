@@ -205,12 +205,12 @@
 //     return value%2==0
 // })
 // console.log(arr)
-// let arr=[1,2,3,4,4,5,6,7,9]
-// console.log(arr)
-// let new_arr=arr.map((value)=>{
-//     return value*value
-// })
-// console.log(new_arr)
+let arr=[1,2,3,4,4,5,6,7,9]
+console.log(arr)
+let new_arr=arr.map((value)=>{
+    return value*value
+})
+console.log(new_arr)
 // console.time("for_loop")
 // for(let i=0;i<1000;i++)
 // {
