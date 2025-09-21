@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // try {
+        //     console.log(harry) 
+        //     // throw new Error("Harry is not good");
+        //     throw new ReferenceError("Harry is not good");
+            
+        // } catch (error) {
+        //     console.log(error.name)
+        //     console.log(error.message)
+        //     console.log(error.stack)
+        // }
+        // try {
+        //     let age=prompt("Enter your age")
+        //     age=Number.parseInt(age)
+        //     if(age>120){
+        //         throw new Error("The age is not possible")
+        //     }
+        //     else if(age<18){
+        //         console.log("you are just a child")
+        //     }
+        //     else{
+        //         console.log("you are adult")
+        //     }
+        // } catch (error) {
+        //     console.log(error)
+        //     console.log(error.name+"::::::"+error.message)
+        // }
+         let p1=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(10)
+                },3000)
+            })
+        }
+        let p2=async()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(20)
+                },2000)
+            })
+        }
+        let p3=async()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(10)
+                },1000)
+            })
+        }
+        const a=async()=>{
+            console.time("run")
+            let aa1=await p1()
+            let aa2=await p2()
+            let aa3=await p3()
+            
+            console.log(aa1,aa2,aa3)
+            console.timeEnd("run")
+
+
+            console.time("run")
+            let a1= p1()
+            let a2= p2()
+            let a3= p3()
+            let a1a2a3=await Promise.all([a1,a2,a3])
+            console.log(a1a2a3)
+            console.timeEnd("run")
+        }
+        a();
+    
+    </script>
+</body>
+</html>
