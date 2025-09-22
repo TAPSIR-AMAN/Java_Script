@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;
+
+    }
+    body{
+        background: black;
+        color: green;
+        font-size: 24px;
+        height: 100vh;
+        background-image: url(https://media.istockphoto.com/id/865457032/vector/abstract-futuristic-cyberspace-with-binary-code-matrix-background-with-digits-well-organized.jpg?s=612x612&w=0&k=20&c=IQcdedY8fn_DMq6nwc5MaHUBe0H0d5DPyibHR8J2usk=) ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+<body>
+    <div>
+    </div>
+    <!-- <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div> -->
+    <!-- <input type="text" id="aman"> -->
+    <script>
+        // let loadscript = (src, ) => new Promise((resolve, reject) => {
+        //     let script = document.createElement("script")
+        //     script.src = src;
+
+        //     script.onload = () => resolve(`✅ Loaded: ${src}`);
+        //     script.onerror = () => reject(new Error(`❌ Failed: ${src}`));
+        //     document.body.append(script)
+        // })
+        // const main2=async (src) => {
+        //     let a=await loadscript("myscript.js")
+        //     console.log(a)
+        // }
+        // main2()
+        // loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css").then((value) => {
+        //     console.log(value);
+        // })
+
+        // let p=()=>{
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(()=>{
+        //             reject(new Error("this is an error"))
+        //         },3000)
+        //     })
+        // }
+
+        // let a=async ()=>{
+        //     try{
+        //     let c =await p();
+        //     console.log(a)
+        //     }
+        //     catch(err){
+        //         console.log("this is an error")
+        //     }
+        // }
+        // a();
+
+
+        // let p1=async()=>{
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve(10)
+        //         },3000)
+        //     })
+        // }
+        // let p2=async()=>{
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve(20)
+        //         },7000)
+        //     })
+        // }
+        // let p3=async()=>{
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve(10)
+        //         },5000)
+        //     })
+        // }
+        // const a=async()=>{
+        //     console.time("run")
+        //     let a1=await p1
+        //     let a2=await p2
+        //     let a3=await p3
+        //     console.timeEnd("run")
+        // }
+        // a()
+        // let b=document.getElementById("aman")
+        // b.addEventListener("input",function(){
+        //     console.log(b.value)
+        //     localStorage.setItem("key:",b.value)
+
+        // })
+        
+        let a = [
+            "intializing server....",
+            "server connected",
+            "fetchind data....",
+            "connecting to facebook....",
+            "fetcing userid....",
+            "user id found",
+            "user id:aman821",
+            "fetching password....",
+            "password:34b34i37",
+            "connecting to facebook....",
+            "conected sucessfully.... ",
+            "hacking completed"
+
+        ]
+        const runner = async (second) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(true);
+                }, second * 1000);
+            })
+            
+        }
+        const hack = async (message) => {
+            await runner(2);
+            document.querySelector("div").innerHTML+=`${message}<br><br>`
+        }
+        (async function () {
+            for(let i=0;i<a.length;i++){
+                await hack(a[i])
+            }
+        })();
+    </script>
+</body>
+
+</html>

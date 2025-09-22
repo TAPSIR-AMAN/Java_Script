@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <!-- <label for="cars">Choose a car:</label>
+  <!-- <label for="cars">Choose a car:</label>
 <select id="cars" name="cars">
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="fiat">Fiat</option>
   <option value="audi">Audi</option> -->
-<!-- </select> -->
-    <script>
-        localStorage.setItem("name","aman")
-        let key=prompt("ENter the key")
-        let value=prompt("ENter the value")
-        localStorage.setItem(key,value)
-         
-        console.log(`the key is ${key} and the value is ${localStorage.getItem(key)}`)
-        if(key=="red"){
-            localStorage.removeItem(key)
-        }
-        if(key==0){
-            localStorage.clear();
-        }
-         
-    </script>
+  <!-- </select> -->
+  <!-- <div>
+    <input type="text" class="nothing">
+ </div> -->
+
+  <script>
+    // localStorage.setItem("name","aman")
+    // let key=prompt("ENter the key")
+    // let value=prompt("ENter the value")
+    // localStorage.setItem(key,value)
+
+    // console.log(`the key is ${key} and the value is ${localStorage.getItem(key)}`)
+    // if(key=="red"){
+    //     localStorage.removeItem(key)
+    // }
+    // if(key==0){
+    //     localStorage.clear();
+    // }
+    // for(let i =0;i<localStorage.length;i++){
+    //     console.log(`the key at key(${i}) is ${localStorage.key(i)} `)
+    // }
+
+    //sessionStoraage
+
+    sessionStorage.setItem("name", "aman")
+//other are same as local storag 
+//in sesson we cant see changes for next web site
+
+
+
+
+    localStorage.setItem("name2", "aman2")
+
+    window.onstorage = (e) => {
+      alert("changes done");
+      console.log(e)
+
+    }
+
+  </script>
 </body>
+
 </html>
