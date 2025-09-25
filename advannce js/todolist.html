@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .container {
+        background-color: black;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .input_div {
+        padding-top: 20px;
+        display: flex2;
+    }
+
+    #input {
+        width: 30em;
+        border-radius: 22%;
+        height: 41px;
+        margin-right: 20px;
+    }
+
+    .input_div button {
+        width: 80px;
+        height: 40px;
+        background-color: grey;
+        color: aliceblue;
+    }
+
+    .list_ele {
+        margin-top: 40px;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    li {
+        display: flex;
+
+        gap: 20px;
+    }
+
+    .underline {
+        text-decoration: line-through;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <h1>Todo Lists</h1>
+            <div class="input_div">
+                <input type="text" id="input"><button id="add" type="button">Add</button>
+            </div>
+            <div class="list_ele">
+                <ul>
+
+                </ul>
+            </div>
+        </form>
+    </div>
+    <script>
+        let input = document.getElementById("input");
+        let data = document.querySelector("ul");
+        let arr = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            arr.push(localStorage.getItem(i))
+            
+        }
+        let datastore;
+        let count = 0;
+        input.addEventListener("input", function async() {
+            datastore = input.value;
+        })
+        let btn = document.querySelector("#add");
+
+        btn.addEventListener("click", function (event) {
+            event.preventDefault()
+            count++;
+            remove(count);
+
+        })
+        const remove = (key) => {
+            input.value = ""
+            arr.push(datastore)
+            display();
+        }
+        // console.log(arr)
+        const display = () => {
+            data.innerHTML = "";
+            arr.forEach((element, index) => {
+                data.innerHTML += `<li id=${index}><span>${element}</span><button type="button" onclick="del(${index})">Delete</button><button type="button" onclick="strike(${index})">Done</button></li>`
+            });
+            arr.forEach((element, index) => {
+                localStorage.setItem(index, element)
+            });
+
+        }
+        // if (arr.length == 0) {
+        //     localStorage.clear()
+        // }
+        const setdata=()=>{
+            
+            localStorage.clear()
+            arr.forEach((element, index) => {
+                localStorage.setItem(index, element)
+            });
+        }
+        let buttons = document.querySelectorAll("button");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", function (event) {
+                event.preventDefault();  // stop form submit
+            });
+        });
+
+        const del=(num)=>{
+            arr.splice(num, 1);
+            console.log(arr)
+            display()
+            setdata()
+        }
+        const strike=(num)=>{
+            document.querySelector("span").classList.toggle("underline")
+        }
+        display()
+
+    </script>
+</body>
+
+</html>

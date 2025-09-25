@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class animal {
+            constructor(name) {
+                this._name = animal.capitalize(name);
+            }
+            display() {
+                console.log(`the name of the animal is ${this._name}`)
+            }
+            static capitalize(name) {//---> call it throught anime where static is define
+                return name.charAt(0).toUpperCase() + name.slice(1);
+            }
+
+
+            get name() {
+                return this._name;
+            }//fot this need to chnage the nmae to _name for mis match name and name at getter or setter 
+
+
+            set name(newName) { //  setter
+                this._name = animal.capitalize(newName);
+            }
+        }
+        let obj = new animal("jack");
+        obj.display()
+        class cat extends animal {//inharitance
+            constructor(name) {
+                super(name)//----->constructor overriding
+                console.log("cat constructor")
+            }
+            display() {
+                super.display()//-->method overriding
+                console.log("this is ur new name")
+            }
+        }
+        let obj1 = new cat("cat");
+        obj1.display()
+        console.log(obj1.name)
+        obj1.name="hack";
+        console.log(obj1.name)
+    </script>
+</body>
+
+</html>
