@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     let a=()=>{
+        //         return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //             resolve(50)
+        //         }, 2000);
+        //     })}
+        //    ( async ()=>{
+
+        //         let b =await a()
+        //         console.log(b)
+        //         let c =await a()
+        //         console.log(c)
+        //         let d =await a()
+        //         console.log(d)
+        //     })()
+        //     console.log(d)
+
+        // let arr = [2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+        // let [a,b]=arr
+        // console.log(a,b)
+
+        // no need for this
+        // let a=arr[0]
+        // let b=arr[1]
+
+
+        // let [a,b,c,d,e,...rest]=arr
+        // console.log(a,b,c,d,e,rest)
+
+
+        // let [a, ,  , ,...rest]=arr
+        // console.log(a,rest)
+
+        // let [a, , b , ,...rest]=arr
+        // console.log(a,b,rest)
+
+        // let {a,b}={a:1,b:2}
+        // console.log(a,b)
+
+        // let obj={...arr}//spread operator
+        // console.log(obj)
+
+        // let arr1=[1,2,3]
+        // let sum=(a,b,c)=>{
+        //     return a+b+c;
+        // }
+        // console.log(sum(...arr1))
+
+        // let obj2={
+        //     name:"aman",
+        //     roll_no:23,
+        //     branch:"cse"
+
+
+        // }
+        // console.log({...obj2,name:"Tapsir"})
+
+        // console.log(a)
+        // let a=5;
+        // console.log(a)
+        // var a=5;
+
+        // aman()
+        // function aman(){
+        //     console.log("hello aman")
+        // }
+
+        //wont work
+        // tapsir()
+        // let tapsir=()=>{
+        //     console.log("hello aman")
+        // }
+        // var tapsir=()=>{
+        //     console.log("hello aman")
+        // }
+
+
+        // closer-->it is a function alone with a lexical enviroment ;
+        // function init(){
+        //     message ="aman"
+        //     function inside(){
+        //         console.log(message)
+        //     }
+        //     message="tapsir"
+        //     return inside;
+        // }
+        // let c=init()
+        // c()
+
+        // arrow function
+
+        // let a=()=>{console.log("hello")}
+        // a()
+
+        // let a=()=>console.log("hello")
+        // a()
+
+        // let a=(name)=>console.log("hello:"+name)
+        // a("aman")
+
+        // let a=name=>console.log("hello:"+name)
+        // a("aman")
+
+
+        // let a=(name,name2)=>console.log("hello:"+name+name2)
+        // a(" tasir"," aman")
+
+        // problem
+        // let x = {
+        //     name: "aman",
+        //     role: "js dev",
+        //     exp: 1,
+        //     show: function () {
+        //         // console.log(`the name is ${this.name} the role is ${this.role} with experience of ${this.exp}`)
+
+
+        //         // setTimeout(function() {
+        //         //     console.log(`the name is ${this.name}\nthe role is ${this.role}\nwith experience of ${this.exp}`)
+                
+        //         // }, 2000);//this will give an error 
+                
+        //         // laters soln of this problem is arrow function
+                
+        //         setTimeout(() => {
+        //                 console.log(`the name is ${this.name}\nthe role is ${this.role}\nwith experience of ${this.exp}`)
+                    
+        //         }, 2000);
+
+        //     }
+        // }
+        // x.show()
+
+
+
+
+        // practice
+
+        let a=(text)=>{
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(text)
+                }, 2000);
+            })
+        }
+        (
+            async()=>{
+                let  b = await a("aman")
+                console.log(b)
+                let  c = await a("tapsir")
+                console.log(c)
+            }
+        )()
+        
+        function add(a,b,c){
+            return a+b+c;
+        }
+        let arr=[1,2,3,4,5]
+        console.log(add(...arr))//spread method
+        
+        
+        
+        let fun=(text,n)=>{
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(text)
+                }, 1000*n);
+            })
+        }
+        (
+            async()=>{
+                let  b = await fun("Fun_aman",5)
+                console.log(b)
+                let  c = await fun("Fun_tapsir",2)
+                console.log(c)
+            }
+        )()
+
+        function simple_intrest(p,r,t){
+            return (p*r*t)/100
+        }
+
+        console.log(simple_intrest(200,2,4))
+        let val=simple_intrest(200,2,4)+200;
+
+        console.log(val)
+
+    </script>
+</body>
+
+</html>
