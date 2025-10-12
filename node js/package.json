@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myscript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TAPSIR-AMAN/Java_Script.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TAPSIR-AMAN/Java_Script/issues"
+  },
+  "homepage": "https://github.com/TAPSIR-AMAN/Java_Script#readme",
+  "dependencies": {
+    "pdf-creator-node": "^2.3.5"
+  }
+}
